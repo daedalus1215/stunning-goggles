@@ -1,5 +1,5 @@
 {
-  "name": "my-vue-ts-app",
+  "name": "my-vue-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,12 +9,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.5.13"
+    "amazon-cognito-identity-js": "^6.3.12",
+    "aws-amplify": "^6.10.2",
+    "oidc-client-ts": "^3.1.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@types/node": "^22.10.1",
     "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/compiler-sfc": "^3.5.13",
+    "@vue/eslint-config-typescript": "^14.1.4",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.32.0",
+    "prettier": "^3.4.2",
     "typescript": "~5.6.2",
-    "vite": "^6.0.1",
+    "vite": "^6.0.3",
     "vue-tsc": "^2.1.10"
   }
 }
