@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
-import { userManager } from "../authService";
+import { userManager } from "../authuserService";
 
 const routes = [
   { path: "/", name: "Home", component: Home },

@@ -1,42 +1,21 @@
 <template>
-  <div id="app">
-    <div>
-      <button @click="signIn">Sign In</button>
-      <button @click="signOut">Log Out</button>
-    </div>
-    <div v-if="user">
-      <p>Hello: {{ user.profile?.email }}</p>
-      <p>Access Token: {{ user.access_token }}</p>
-      <p>ID Token: {{ user.id_token }}</p>
-      <p>Refresh Token: {{ user.refresh_token }}</p>
-    </div>
+  <div>
+    <h1>Welcome to My Vue App</h1>
+    <SignInButton />
+    <SignOutButton />
+    <router-view />
   </div>
 </template>
 
 <script>
-import { userManager, signOutRedirect } from "./authService";
+import SignInButton from "./SignInButton.vue";
+import SignOutButton from "./SignOutButton.vue";
 
 export default {
-  data() { 
-    return {
-      user: null,
-    };
-  },
-  methods: {
-    async signIn() {
-      await userManager.signinRedirect();
-    },
-    async signOut() {
-      await signOutRedirect();
-    },
-  },
-  async created() {
-    try {
-      const user = await userManager.signinCallback();
-      this.user = user;
-    } catch (error) {
-      console.error("User sign-in callback failed", error);
-    }
+  name: "App",
+  components: {
+    SignInButton,
+    SignOutButton,
   },
 };
 </script>
