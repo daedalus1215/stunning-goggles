@@ -1,17 +1,14 @@
 <template>
-    <button @click="signIn">Sign In</button>
-  </template>
-  
-  <script>
-  import { signInRedirect } from "../../services/authService";
-  
-  export default {
-    name: "SignInButton",
-    methods: {
-      async signIn() {
-        await signInRedirect();
-      },
-    },
-  };
-  </script>
-  
+  <q-btn label="Sign In" color="primary" @click="signIn" />
+</template>
+
+<script>
+import { signIn } from '../services/oidc'
+
+export default {
+  name: 'SignInButton',
+  methods: {
+    signIn,
+  },
+}
+</script>
