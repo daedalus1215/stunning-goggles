@@ -3,7 +3,7 @@
   </template>
   
   <script>
-  import { signInRedirect } from "./authuserService";
+  import { signInRedirect } from "../../services/authService";
   
   export default {
     name: "SignInButton",
